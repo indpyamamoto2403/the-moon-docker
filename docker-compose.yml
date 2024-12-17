@@ -5,6 +5,7 @@ services:
     build: ./docker/the-moon-php
     container_name: the-moon-php
     ports:
+      - 8000:8000
       - 5173:5173
     volumes:
       - ./src/the-moon-php:/var/www/the-moon-php
@@ -32,8 +33,6 @@ services:
       - php
     ports:
       - 80:80
-      - 8000:8000
-      - 8001:8001
     volumes:
       - ./src/the-moon-php:/var/www/the-moon-php
       - ./src/the-moon-python:/var/www/the-moon-python      
